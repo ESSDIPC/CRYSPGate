@@ -1,0 +1,33 @@
+
+# The singles
+/gate/digitizerMgr/CsI/SinglesDigitizer/Singles/insert                        adder
+#/gate/digitizerMgr/BGO/SinglesDigitizer/Singles/insert                        adder
+
+#/gate/digitizerMgr/BGO/SinglesDigitizer/Singles/insert                        merger
+#/gate/digitizerMgr/BGO/SinglesDigitizer/Singles/merger/addInput  adder/Singles_CsI
+
+/gate/digitizerMgr/CsI/SinglesDigitizer/Singles/insert                        readout
+/gate/digitizerMgr/CsI/SinglesDigitizer/Singles/readout/setDepth              1
+
+/gate/digitizerMgr/CsI/SinglesDigitizer/Singles/insert                        energyResolution
+/gate/digitizerMgr/CsI/SinglesDigitizer/Singles/energyResolution/fwhm        0.26
+/gate/digitizerMgr/CsI/SinglesDigitizer/Singles/energyResolution/energyOfReference 511. keV
+
+/gate/digitizerMgr/CsI/SinglesDigitizer/Singles/insert                        energyFraming
+/gate/digitizerMgr/CsI/SinglesDigitizer/Singles/energyFraming/setMin            350. keV
+/gate/digitizerMgr/CsI/SinglesDigitizer/Singles/energyFraming/setMax            650. keV
+
+
+# Coincidence sorter
+/gate/digitizerMgr/CoincidenceSorter/Coincidences/setInputCollection Singles_CsI
+/gate/digitizerMgr/CoincidenceSorter/Coincidences/setWindow          120 ns
+/gate/digitizerMgr/CoincidenceSorter/Coincidences/MultiplesPolicy    takeWinnerOfGoods
+
+/gate/digitizerMgr/name                            delay
+/gate/digitizerMgr/insert                          CoincidenceSorter
+/gate/digitizerMgr/CoincidenceSorter/delay/setInputCollection Singles_CsI
+/gate/digitizerMgr/CoincidenceSorter/delay/setWindow                 120 ns
+/gate/digitizerMgr/CoincidenceSorter/delay/setOffset                 500 ns
+#/gate/digitizerMgr/delay/MultiplesPolicy          takeWinnerOfGoods
+
+

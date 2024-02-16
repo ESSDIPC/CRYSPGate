@@ -1,0 +1,79 @@
+# W O R L D
+/gate/world/geometry/setXLength 100 cm
+/gate/world/geometry/setYLength 100. cm
+/gate/world/geometry/setZLength 100. cm
+
+# C Y L I N D R I C A L
+/gate/world/daughters/name cylindricalPET
+/gate/world/daughters/insert cylinder
+/gate/cylindricalPET/setMaterial Water
+/gate/cylindricalPET/geometry/setRmax 45 cm
+/gate/cylindricalPET/geometry/setRmin 39.5 cm
+/gate/cylindricalPET/geometry/setHeight 90 cm
+/gate/cylindricalPET/vis/forceWireframe
+
+# R S E C T O R
+/gate/cylindricalPET/daughters/name rsector
+/gate/cylindricalPET/daughters/insert box
+/gate/rsector/placement/setTranslation 41.86 0 0 cm
+/gate/rsector/geometry/setXLength 37.2 mm
+/gate/rsector/geometry/setYLength 48 mm
+/gate/rsector/geometry/setZLength 90 cm
+/gate/rsector/setMaterial Water
+/gate/rsector/vis/forceWireframe
+/gate/rsector/vis/setColor red
+
+# M O D U L E
+/gate/rsector/daughters/name module
+/gate/rsector/daughters/insert box
+/gate/module/geometry/setXLength 37.2 mm
+/gate/module/geometry/setYLength 48. mm
+/gate/module/geometry/setZLength 48 mm
+/gate/module/setMaterial Water
+/gate/module/vis/forceWireframe
+/gate/module/vis/setColor gray
+
+# C R Y S T A L
+/gate/module/daughters/name crystal
+/gate/module/daughters/insert box
+/gate/crystal/geometry/setXLength 37.2 mm
+/gate/crystal/geometry/setYLength 48 mm
+/gate/crystal/geometry/setZLength 48 mm
+/gate/crystal/setMaterial Water
+/gate/crystal/vis/forceWireframe
+/gate/crystal/vis/setColor magenta
+
+# L A Y E R
+/gate/crystal/daughters/name CsI
+/gate/crystal/daughters/insert box
+/gate/CsI/geometry/setXLength 37.2 mm
+/gate/CsI/geometry/setYLength 48 mm
+/gate/CsI/geometry/setZLength 48 mm
+/gate/CsI/placement/setTranslation 0 0 0 mm
+/gate/CsI/setMaterial CsI
+/gate/CsI/vis/setColor yellow
+
+# R E P E A T C R Y S T A L
+/gate/crystal/repeaters/insert cubicArray
+/gate/crystal/cubicArray/setRepeatNumberX 1
+/gate/crystal/cubicArray/setRepeatNumberY 1
+/gate/crystal/cubicArray/setRepeatNumberZ 1
+/gate/crystal/cubicArray/setRepeatVector 37.2 48 48 mm
+
+# R E P E A T M O D U L E
+/gate/module/repeaters/insert cubicArray
+/gate/module/cubicArray/setRepeatNumberZ 18
+/gate/module/cubicArray/setRepeatVector 37.2 48 48 mm
+
+# R E P E A T R S E C T O R
+/gate/rsector/repeaters/insert ring
+/gate/rsector/ring/setRepeatNumber 50
+
+# A T T A C H S Y S T E M
+/gate/systems/cylindricalPET/rsector/attach rsector
+/gate/systems/cylindricalPET/module/attach module
+/gate/systems/cylindricalPET/crystal/attach crystal
+/gate/systems/cylindricalPET/layer0/attach CsI
+
+# A T T A C H L A Y E R SD
+/gate/CsI/attachCrystalSD
