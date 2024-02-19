@@ -1,30 +1,17 @@
 
-/gate/source/addSource F18LineSource
-/gate/source/F18LineSource/setActivity 10. becquerel
+/gate/source/addSource normalization_source
+/gate/source/normalization_source/setActivity 100000. becquerel
 
-/gate/source/F18LineSource/gps/particle e+
-/gate/source/F18LineSource/setForcedUnstableFlag true
-/gate/source/F18LineSource/setForcedHalfLife 6586.2 s
-/gate/source/F18LineSource/gps/energytype Fluor18
-/gate/source/F18LineSource/gps/type Volume
-/gate/source/F18LineSource/gps/shape Cylinder
-/gate/source/F18LineSource/gps/radius .5 mm
-/gate/source/F18LineSource/gps/halfz 34.0 cm
-/gate/source/F18LineSource/gps/angtype iso
-/gate/source/F18LineSource/gps/centre 0. -2.0 0. cm
+/gate/source/normalization_source/gps/particle gamma
+/gate/source/normalization_source/gps/ene/mono 511. keV
+/gate/source/normalization_source/gps/type Volume
+/gate/source/normalization_source/gps/shape Cylinder
+/gate/source/normalization_source/gps/radius .5 mm
+/gate/source/normalization_source/gps/halfz 34.0 cm
+/gate/source/normalization_source/gps/angtype iso
+/gate/source/normalization_source/gps/centre 0. 0 0. cm
+/gate/source/normalization_source/setType        backtoback
 
-/gate/source/addSource O15LineSource
-/gate/source/O15LineSource/setActivity 10. becquerel
-/gate/source/O15LineSource/gps/particle e+
-/gate/source/O15LineSource/setForcedUnstableFlag true
-/gate/source/O15LineSource/setForcedHalfLife 122.24 s
-/gate/source/O15LineSource/gps/energytype Oxygen15
-/gate/source/O15LineSource/gps/type Volume
-/gate/source/O15LineSource/gps/shape Cylinder
-/gate/source/O15LineSource/gps/radius .5 mm
-/gate/source/O15LineSource/gps/halfz 34.0 cm
-/gate/source/O15LineSource/gps/angtype iso
-/gate/source/O15LineSource/gps/centre 0. 2.0 0. cm
 
 /gate/source/list
 

@@ -3,9 +3,9 @@
 /gate/world/daughters/name         phantom
 /gate/world/daughters/insert       cylinder
 /gate/phantom/geometry/setRmin     0.0 cm
-/gate/phantom/geometry/setRmax     10.0 cm
-/gate/phantom/geometry/setHeight   70. cm
-/gate/phantom/setMaterial          Water
+/gate/phantom/geometry/setRmax     35.0 cm
+/gate/phantom/geometry/setHeight   90. cm
+/gate/phantom/setMaterial          Air
 /gate/phantom/vis/setColor         blue
 
 # Define the sensitive detector

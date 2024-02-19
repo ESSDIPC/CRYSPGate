@@ -16,6 +16,7 @@
 /control/execute mac/pet_digitizer.mac
 /control/execute mac/NEMA_IEC_2001.mac
 #/control/execute mac/cylindrical_phantom.mac
+#/control/execute mac/brain/VoxelizedPhantom.mac
 
 ##########################################################
 # Physics
@@ -35,12 +36,15 @@
 ##########################################################
 # Visualisation
 ##########################################################
-/control/execute mac/visu.mac
+#/control/execute mac/visu.mac
 
 ##########################################################
 # Source
 ##########################################################
 /control/execute mac/NEMA_IEC_2001_sources.mac
+#/control/execute mac/brain/VoxelizedSource.mac
+#/control/execute mac/normalization_source.mac
+#/control/execute mac/sources.mac
 
 # Random
 /gate/random/setEngineName MersenneTwister
@@ -53,8 +57,8 @@
 
 # Start acquisition
 /gate/application/setTimeStart 0 s
-/gate/application/setTimeSlice 0.1 ms
-/gate/application/setTimeStop  1 ms
+/gate/application/setTimeSlice 0.0012 s
+/gate/application/setTimeStop  0.0024 s
 
-#/gate/application/startDAQ
+/gate/application/startDAQ
 
