@@ -37,8 +37,8 @@
 /gate/module/daughters/name crystal
 /gate/module/daughters/insert box
 /gate/crystal/geometry/setXLength 37.2 mm
-/gate/crystal/geometry/setYLength 48 mm
-/gate/crystal/geometry/setZLength 48 mm
+/gate/crystal/geometry/setYLength 6 mm
+/gate/crystal/geometry/setZLength 6 mm
 /gate/crystal/setMaterial Air
 /gate/crystal/vis/forceWireframe
 /gate/crystal/vis/setColor magenta
@@ -47,8 +47,8 @@
 /gate/crystal/daughters/name CsI
 /gate/crystal/daughters/insert box
 /gate/CsI/geometry/setXLength 37.2 mm
-/gate/CsI/geometry/setYLength 48 mm
-/gate/CsI/geometry/setZLength 48 mm
+/gate/CsI/geometry/setYLength 6 mm
+/gate/CsI/geometry/setZLength 6 mm
 /gate/CsI/placement/setTranslation 0 0 0 mm
 /gate/CsI/setMaterial CsI
 /gate/CsI/vis/setColor yellow
@@ -56,9 +56,9 @@
 # R E P E A T C R Y S T A L
 /gate/crystal/repeaters/insert cubicArray
 /gate/crystal/cubicArray/setRepeatNumberX 1
-/gate/crystal/cubicArray/setRepeatNumberY 1
-/gate/crystal/cubicArray/setRepeatNumberZ 1
-/gate/crystal/cubicArray/setRepeatVector 37.2 48 48 mm
+/gate/crystal/cubicArray/setRepeatNumberY 8
+/gate/crystal/cubicArray/setRepeatNumberZ 8
+/gate/crystal/cubicArray/setRepeatVector 37.2 6 6 mm
 
 # R E P E A T M O D U L E
 /gate/module/repeaters/insert cubicArray

@@ -6,7 +6,7 @@
 /gate/source/normalization_source/gps/ene/mono 511. keV
 /gate/source/normalization_source/gps/type Volume
 /gate/source/normalization_source/gps/shape Cylinder
-/gate/source/normalization_source/gps/radius .5 mm
+/gate/source/normalization_source/gps/radius 30 cm
 /gate/source/normalization_source/gps/halfz 34.0 cm
 /gate/source/normalization_source/gps/angtype iso
 /gate/source/normalization_source/gps/centre 0. 0 0. cm
