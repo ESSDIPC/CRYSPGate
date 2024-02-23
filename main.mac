@@ -14,7 +14,7 @@
 /control/execute mac/world.mac
 /control/execute mac/pet_head.mac
 /control/execute mac/pet_digitizer.mac
-#/control/execute mac/NEMA_IEC_2001.mac
+/control/execute mac/NEMA_IEC_2001.mac
 #/control/execute mac/cylindrical_phantom.mac
 #/control/execute mac/brain/VoxelizedPhantom.mac
 
@@ -36,14 +36,14 @@
 ##########################################################
 # Visualisation
 ##########################################################
-#/control/execute mac/visu.mac
+/control/execute mac/visu.mac
 
 ##########################################################
 # Source
 ##########################################################
-#/control/execute mac/NEMA_IEC_2001_sources.mac
+/control/execute mac/NEMA_IEC_2001_sources.mac
 #/control/execute mac/brain/VoxelizedSource.mac
-/control/execute mac/normalization_source.mac
+#/control/execute mac/normalization_source.mac
 #/control/execute mac/sources.mac
 #/control/execute mac/spheres.mac
 # Random
@@ -57,8 +57,8 @@
 
 # Start acquisition
 /gate/application/setTimeStart 0 s
-/gate/application/setTimeSlice 0.01 s
-/gate/application/setTimeStop  0.1 s
+/gate/application/setTimeSlice 0.1 s
+/gate/application/setTimeStop  0.5 s
 
-/gate/application/startDAQ
+#/gate/application/startDAQ
 
