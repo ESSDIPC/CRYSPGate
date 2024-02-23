@@ -36,7 +36,7 @@
 ##########################################################
 # Visualisation
 ##########################################################
-/control/execute mac/visu.mac
+#/control/execute mac/visu.mac
 
 ##########################################################
 # Source
@@ -60,5 +60,5 @@
 /gate/application/setTimeSlice 0.1 s
 /gate/application/setTimeStop  0.5 s
 
-#/gate/application/startDAQ
+/gate/application/startDAQ
 
