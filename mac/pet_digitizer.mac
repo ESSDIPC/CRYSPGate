@@ -10,7 +10,7 @@
 #/gate/digitizerMgr/crystal/SinglesDigitizer/Singles/clustering/setRejectionMultipleClusters        0
 
 /gate/digitizerMgr/crystal/SinglesDigitizer/Singles/insert                             energyResolution
-/gate/digitizerMgr/crystal/SinglesDigitizer/Singles/energyResolution/fwhm              0.07
+/gate/digitizerMgr/crystal/SinglesDigitizer/Singles/energyResolution/fwhm              0.10
 /gate/digitizerMgr/crystal/SinglesDigitizer/Singles/energyResolution/energyOfReference 511. keV
 
 /gate/digitizerMgr/crystal/SinglesDigitizer/Singles/insert                             energyFraming

@@ -15,8 +15,8 @@
 /gate/world/daughters/name cylindricalPET
 /gate/world/daughters/insert cylinder
 /gate/cylindricalPET/setMaterial Air
-/gate/cylindricalPET/geometry/setRmax 353 mm
-/gate/cylindricalPET/geometry/setRmin 323 mm
+/gate/cylindricalPET/geometry/setRmax 313 mm
+/gate/cylindricalPET/geometry/setRmin 280 mm
 /gate/cylindricalPET/geometry/setHeight 258.0 mm
 /gate/cylindricalPET/vis/forceWireframe
 #/gate/cylindricalPET/vis/forceSolid
@@ -25,10 +25,10 @@
 #     R S E C T O R  (MODULE 2x4 blocks)
 /gate/cylindricalPET/daughters/name rsector
 /gate/cylindricalPET/daughters/insert box
-/gate/rsector/placement/setTranslation 338.0 0 0 mm
-/gate/rsector/geometry/setXLength 37.2 mm
-/gate/rsector/geometry/setYLength 32.0 mm 
-/gate/rsector/geometry/setZLength 266 mm
+/gate/rsector/placement/setTranslation 295. 0 0 mm
+/gate/rsector/geometry/setXLength 22.8 mm
+/gate/rsector/geometry/setYLength 32.0 mm
+/gate/rsector/geometry/setZLength 256 mm
 /gate/rsector/setMaterial Air
 /gate/rsector/vis/forceWireframe
 /gate/rsector/vis/setColor green
@@ -37,7 +37,7 @@
 #      M O D U L E  (BLOCK 8x8 crystals)
 /gate/rsector/daughters/name module
 /gate/rsector/daughters/insert box
-/gate/module/geometry/setXLength  37.2  mm
+/gate/module/geometry/setXLength  22.8  mm
 /gate/module/geometry/setYLength  32.0  mm
 /gate/module/geometry/setZLength  32.0  mm
 /gate/module/setMaterial Plastic
@@ -47,17 +47,17 @@
 
 
 #       C R Y S T A L
-# 4mm x 4mm x 20 mm  
+# 4mm x 4mm x 20 mm
 /gate/module/daughters/name crystal
 /gate/module/daughters/insert box
 /gate/crystal/placement/setTranslation 0 0 0 mm
-/gate/crystal/geometry/setXLength 37.20 mm
+/gate/crystal/geometry/setXLength 22.80 mm
 /gate/crystal/geometry/setYLength 4.0 mm
 /gate/crystal/geometry/setZLength 4.0 mm
-/gate/crystal/setMaterial CsI
+/gate/crystal/setMaterial LSO
 /gate/crystal/vis/forceWireframe
 #/gate/crystal/vis/forceSolid
-/gate/crystal/vis/setColor red
+#/gate/crystal/vis/setColor red
 
 #       R E P E A T    C R Y S T A L
 /gate/crystal/repeaters/insert cubicArray
@@ -71,7 +71,7 @@
 /gate/module/cubicArray/setRepeatNumberX 1
 /gate/module/cubicArray/setRepeatNumberY 1
 /gate/module/cubicArray/setRepeatNumberZ 8
-/gate/module/cubicArray/setRepeatVector 0. 0. 32.25 mm
+/gate/module/cubicArray/setRepeatVector 0. 0. 32. mm
 
 #       R E P E A T    R S E C T O R 
 /gate/rsector/repeaters/insert ring
