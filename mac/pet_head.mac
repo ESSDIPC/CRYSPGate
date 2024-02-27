@@ -25,7 +25,7 @@
 #     R S E C T O R  (MODULE 2x4 blocks)
 /gate/cylindricalPET/daughters/name rsector
 /gate/cylindricalPET/daughters/insert box
-/gate/rsector/placement/setTranslation 295. 0 0 mm
+/gate/rsector/placement/setTranslation 297. 0 0 mm
 /gate/rsector/geometry/setXLength 22.8 mm
 /gate/rsector/geometry/setYLength 32.0 mm
 /gate/rsector/geometry/setZLength 256 mm
